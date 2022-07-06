@@ -1,4 +1,5 @@
 let version = 1;
+let nothing
 let alwaysupdate=true;
 if (localStorage.getItem("AMGS-game-version")==undefined || alwaysupdate==true || localStorage.getItem("AMGS-game-version")<=version){
     localStorage.setItem("AMGS-game-content", `
