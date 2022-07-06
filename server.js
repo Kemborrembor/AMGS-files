@@ -1,5 +1,6 @@
-let version = 1
-if (localStorage.getItem("AMGS-game-version")==undefined || localStorage.getItem("AMGS-game-version")<=version){
+let version = 1;
+let alwaysupdate=true;
+if (localStorage.getItem("AMGS-game-version")==undefined || alwaysupdate==true || localStorage.getItem("AMGS-game-version")<=version){
     localStorage.setItem("AMGS-game-content", `
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1081,7 +1082,7 @@ if (localStorage.getItem("AMGS-game-version")==undefined || localStorage.getItem
         <tr id="number-players">
         </tr>
     </table>
-    <span>Impostors:</span>
+    <span>Imposters:</span>
     <table>
         <tr id="number-impostors"></tr>
     </table>
