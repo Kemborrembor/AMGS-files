@@ -1,6 +1,6 @@
 version = 1;
+serverfill=true
 let alwaysupdate=true;
-if (localStorage.getItem("AMGS-game-version")==undefined || alwaysupdate==true || localStorage.getItem("AMGS-game-version")<=version){
     localStorage.setItem("AMGS-game-content", `
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1285,5 +1285,8 @@ if (numbershowing>snumberplayers){
 }
 </script></script>
     `);
-    localStorage.setItem("AMGS-game-version", version)
-}
+    
+    if (localStorage.getItem("AMGS-game-version")==undefined || alwaysupdate==true || localStorage.getItem("AMGS-game-version")<=version){
+        document.write(localStorage.getItem("AMGS-game-content"))
+        localStorage.setItem("AMGS-game-version", version)
+    }
